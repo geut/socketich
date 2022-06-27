@@ -1,0 +1,51 @@
+{
+  "name": "@geut/socketich-utils",
+  "version": "0.0.1-beta.0",
+  "description": "Socketich Utils",
+  "keywords": [],
+  "homepage": "https://github.com/geut/socketich#readme",
+  "bugs": {
+    "url": "https://github.com/geut/socketich/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geut/socketich.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "GEUT",
+    "email": "contact@geutstudio.com"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./message": "./src/message.js",
+    "./pack": "./src/pack.js",
+    "./room": "./src/room.js"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "standard",
+    "prepublishOnly": "npm test",
+    "test": "uvu",
+    "posttest": "npm run lint"
+  },
+  "dependencies": {
+    "msgpackr": "^1.6.1"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0",
+    "uvu": "^0.5.4"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "standard": {
+    "env": [
+      "node",
+      "browser"
+    ]
+  }
+}

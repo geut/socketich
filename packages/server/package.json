@@ -1,0 +1,60 @@
+{
+  "name": "@geut/socketich",
+  "version": "0.0.1-beta.0",
+  "description": "Socketich server",
+  "keywords": [],
+  "homepage": "https://github.com/geut/socketich#readme",
+  "bugs": {
+    "url": "https://github.com/geut/socketich/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geut/socketich.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "GEUT",
+    "email": "contact@geutstudio.com"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "src",
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "standard",
+    "prepublishOnly": "npm test",
+    "test": "uvu",
+    "posttest": "npm run lint"
+  },
+  "dependencies": {
+    "@geut/socketich-client": "^0.0.1-beta.0",
+    "@geut/socketich-utils": "^0.0.1-beta.0",
+    "emittery": "^0.11.0",
+    "esbuild": "^0.14.44",
+    "live-directory": "^2.3.2",
+    "msgpackr": "^1.6.1",
+    "uWebSockets.js": "^20.10.0"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0",
+    "uvu": "^0.5.4"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "standard": {
+    "env": [
+      "node"
+    ],
+    "ignore": [
+      "dist"
+    ]
+  },
+  "chan": {
+    "git-url": "https://github.com/geut/socketich"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "@geut/socketich-client",
+  "version": "0.0.1-beta.0",
+  "description": "Socketich Client",
+  "keywords": [],
+  "homepage": "https://github.com/geut/socketich#readme",
+  "bugs": {
+    "url": "https://github.com/geut/socketich/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geut/socketich.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "GEUT",
+    "email": "contact@geutstudio.com"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./src/client.js"
+  },
+  "files": [
+    "src",
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "standard",
+    "prepublishOnly": "npm test",
+    "test": "uvu",
+    "posttest": "npm run lint"
+  },
+  "dependencies": {
+    "@geut/socketich-utils": "^0.0.1-beta.0",
+    "msgpackr": "^1.6.1",
+    "nanoassert": "^2.0.0",
+    "pws": "^6.0.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0",
+    "uvu": "^0.5.4"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "standard": {
+    "env": [
+      "node",
+      "browser"
+    ]
+  }
+}

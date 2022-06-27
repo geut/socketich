@@ -1,0 +1,28 @@
+{
+  "name": "@geut/socketich",
+  "version": "0.0.1-beta.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "sort-package-json": "npx sort-package-json package-json packages/*/package.json",
+    "version": "chan release --allow-yanked ${npm_package_version} && git add .",
+    "chan": "chan"
+  },
+  "devDependencies": {
+    "@geut/chan": "^3.2.6",
+    "turbo": "latest",
+    "standard": "latest"
+  },
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "npm@8.5.5"
+}
