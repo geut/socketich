@@ -37,7 +37,7 @@
     "esbuild": "^0.14.44",
     "live-directory": "^2.3.2",
     "msgpackr": "^1.6.1",
-    "uWebSockets.js": "^20.10.0"
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.10.0"
   },
   "devDependencies": {
     "standard": "^17.0.0",
