@@ -1,7 +1,6 @@
 {
   "name": "@geut/socketich",
   "version": "0.0.1-beta.0",
-  "private": true,
   "workspaces": [
     "packages/*"
   ],
