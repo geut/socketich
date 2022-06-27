@@ -1,20 +1,47 @@
-# @geut/socketich
-Template to create modules following the :snail: **GEUT** path
 
-![Tests](https://github.com/geut/socketich/actions/workflows/test.yml/badge.svg)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat)](https://standardjs.com)
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat)](https://github.com/RichardLitt/standard-readme)
+<div align="center">
+
+<h1 align="center">Socketich</h1>
+
+Performant WebSocket server and persistent client powered by <b><a href="https://github.com/uNetworking/uWebSockets.js">uWebSockets.js</a></b> and <b><a href="https://github.com/porsager/pws">PersistentWebSocket</a></b>
 
 [![Made by GEUT][geut-badge]][geut-url]
 
+</div>
+
 ## Install
 
-```
+```bash
+npm i @geut/socketich
 ```
 
 ## Usage
 
+1. Start server
+```js
+// Node app
+import { createServer } from '@geut/socketich'
+
+const stop = createServer({ port, host })
+
+// Gracefully shut down server:
+stop()
+
+// WS Server listeninig on ws://0.0.0.0:3000
 ```
+
+2. Create and connect a Socketich client
+```js
+// Browser/Client app
+await import('http://0.0.0.0:3000/client.min.js?format=iife')
+
+client = new Client('ws://0.0.0.0:3000', Date.now())
+await client.connected
+
+room = client.createRoom('chat-with-socketich')
+room.on('chat-message', message => console.log('New message:', message))
+room.emit('chat-message', 'Hello there!')
+
 ```
 
 ## Issues

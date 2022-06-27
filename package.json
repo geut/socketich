@@ -14,7 +14,7 @@
     "chan": "chan"
   },
   "devDependencies": {
-    "@geut/chan": "^3.2.6",
+    "@geut/chan": "^3.2.9",
     "standard": "latest",
     "turbo": "latest"
   },
