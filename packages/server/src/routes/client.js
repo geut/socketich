@@ -4,6 +4,12 @@ import LiveDirectory from 'live-directory'
 
 import { ASSETS_PATH, buildJsClient } from '../lib/build-client.js'
 
+/**
+ *
+ * @param {LiveDirectory} assets
+ * @param {Boolean} minify
+ * @returns {Function}
+ */
 function processClientJsRequest (assets, minify = false) {
   /**
    *

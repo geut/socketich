@@ -1,6 +1,6 @@
 {
   "name": "@geut/socketich",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.1",
   "description": "Socketich server",
   "keywords": [],
   "homepage": "https://github.com/geut/socketich#readme",
@@ -33,7 +33,6 @@
   "dependencies": {
     "@geut/socketich-client": "^0.0.1-beta.0",
     "@geut/socketich-utils": "^0.0.1-beta.0",
-    "emittery": "^0.11.0",
     "esbuild": "^0.14.44",
     "live-directory": "^2.3.2",
     "msgpackr": "^1.6.1",

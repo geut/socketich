@@ -22,7 +22,7 @@ npm i @geut/socketich
 // Node app
 import { createServer } from '@geut/socketich'
 
-const stop = createServer({ port, host })
+const stop = createServer()
 
 // Gracefully shut down server:
 stop()
