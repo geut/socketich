@@ -5,6 +5,8 @@ import { SocketichClientProvider } from '@geut/socketich-react'
 
 import App from './App'
 
+import './index.css'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <SocketichClientProvider url='ws://0.0.0.0:3001'>
