@@ -1,6 +1,6 @@
 {
   "name": "@geut/socketich",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "Socketich server",
   "keywords": [],
   "homepage": "https://github.com/geut/socketich#readme",
@@ -45,6 +45,9 @@
   "engines": {
     "node": ">=14"
   },
+  "chan": {
+    "git-url": "https://github.com/geut/socketich"
+  },
   "standard": {
     "env": [
       "node"
@@ -52,8 +55,5 @@
     "ignore": [
       "dist"
     ]
-  },
-  "chan": {
-    "git-url": "https://github.com/geut/socketich"
   }
 }
