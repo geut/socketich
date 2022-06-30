@@ -19,9 +19,6 @@ export class Client {
   _ready = createSignal()
 
   constructor (url, userId) {
-    // assert(url !== undefined, 'url is required')
-    // assert(userId !== undefined, 'userId is required')
-
     if (!url) {
       url = new URL(window.location.href)
       url.protocol = url.protocol.replace('http', 'ws')
