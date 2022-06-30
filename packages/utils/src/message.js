@@ -1,12 +1,12 @@
 export const MESSAGE_ACTIONS = {
-  subscribe: 0,
-  unsubscribe: 1
+  subscribe: 's',
+  unsubscribe: 'u'
 }
 
 export const MESSAGE_EVENTS = {
-  userConnected: 0,
-  userConnectedAck: 1,
-  userDisconnected: 2
+  userConnected: 'uc',
+  userConnectedAck: 'uca',
+  userDisconnected: 'ud'
 }
 
 export const MESSAGE_KEYS = {
