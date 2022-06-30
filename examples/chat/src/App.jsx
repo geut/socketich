@@ -33,7 +33,6 @@ function App () {
   }
 
   function handleUsernameChange (event) {
-    console.log(event)
     if (!event.target.value) return
     setUsername(event.target.value)
   }
