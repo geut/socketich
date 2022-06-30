@@ -96,7 +96,7 @@ export class Client {
       this._rooms.forEach(room => {
         if (this._isProtectedRoom(room.name)) return
 
-        room.emit(MESSAGE_EVENTS.subscribe)
+        room.emit(MESSAGE_ACTIONS.subscribe)
       })
     })
 
