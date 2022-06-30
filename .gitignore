@@ -37,3 +37,6 @@ yarn-error.log*
 
 # builds
 dist/
+
+# node version
+.node-version
