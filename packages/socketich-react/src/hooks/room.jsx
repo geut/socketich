@@ -1,4 +1,4 @@
-import { useClient } from './client.js'
+import { useClient } from './client.jsx'
 
 export function useRoom (roomName) {
   const client = useClient()
