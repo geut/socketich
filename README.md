@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<h1 align="center">Socketich</h1>
+<h1 align="center">Socketich 📨</h1>
 
 Performant WebSocket server and persistent client powered by <b><a href="https://github.com/uNetworking/uWebSockets.js">uWebSockets.js</a></b> and <b><a href="https://github.com/porsager/pws">PersistentWebSocket</a></b>
 
