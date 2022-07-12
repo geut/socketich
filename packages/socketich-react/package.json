@@ -56,6 +56,9 @@
     "node": ">=14"
   },
   "standard": {
+    "ignore": [
+      "dist"
+    ],
     "env": [
       "node",
       "browser"
