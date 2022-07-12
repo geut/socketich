@@ -19,9 +19,9 @@ export function buildJsClient (format, minify = false) {
     format,
     minify,
     absWorkingDir: __dirname,
-    globalName: '__client',
+    globalName: '__socketich',
     footer: {
-      js: format === 'iife' ? 'window.Client = __client.Client' : undefined
+      js: format === 'iife' ? 'window.Socketich = __socketich.Client' : undefined
     },
     sourcemap: process.env.NODE_ENV !== 'production' ? 'inline' : undefined
   })

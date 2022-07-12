@@ -1,3 +1,6 @@
+/** @typedef {import('uWebSockets.js').TemplatedApp} TemplatedApp */
+/** @typedef {import('uWebSockets.js').WebSocketBehavior} WebSocketBehavior */
+
 import { MESSAGE_ACTIONS, MESSAGE_EVENTS, MESSAGE_STATES } from '@geut/socketich-utils/message'
 import { packMessage, unpackMessage } from '@geut/socketich-utils/pack'
 import { GLOBAL_ROOM, buildRoomName } from '@geut/socketich-utils/room'
@@ -12,9 +15,11 @@ export const defaultWebSocketOptions = {
 
 /**
  *
- * @param {import('uWebSockets.js').TemplatedApp} app
+ * Creates a WebSocket handler for '/' in @param {app}
+ * 
+ * @param {TemplatedApp} app
  * @param {Object} opts
- * @param {import('uWebSockets.js').WebSocketBehavior} opts.webSocketOptions
+ * @param {WebSocketBehavior} opts.webSocketOptions
  */
 export function webSocket (app, opts = {}) {
   const {

@@ -1,6 +1,6 @@
 import { createContext, useMemo } from 'react'
 
-import { Client } from '@geut/socketich-client'
+import { SocketichClient } from '@geut/socketich-client'
 
 const clients = new Map()
 
@@ -9,7 +9,7 @@ function createClient (url, userId) {
 
   let client
   if (!clients.has(clientKey)) {
-    client = new Client(url, userId)
+    client = new SocketichClient(url, userId)
     clients.set(clientKey, client)
   }
 

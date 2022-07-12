@@ -1,3 +1,5 @@
+/** @typedef {import('uWebSockets.js').HttpResponse} HttpResponse */
+
 import { v4 as uuid } from 'uuid'
 import PersistentWebSocket from 'pws'
 import { unpack } from 'msgpackr'
@@ -11,13 +13,29 @@ import { createSignal } from './utils.js'
 
 import { Room } from './room.js'
 
-export class Client {
+/**
+ * Socketich client. Creates a WebSocket connection to a Socketich server.
+ *
+ * @example
+ * // Random user id. Default websocket url.
+ * const socketich = new SocketichClient()
+ *
+ * // Custom userId and wensocket url
+ * const socketich = new SocketichClient('ws://my-socketich-server:2000', 'my-user-id')
+ */
+export class SocketichClient {
   _url
   _userId
   _socket
   _rooms = new Map()
   _ready = createSignal()
 
+  /**
+   * Creates a new {SocketichClient} object and WebSocket connection to a Socketich server.
+   *
+   * @param {String} url Socketich Server URL.
+   * @param {String} [userId=uuid] User id (to identify this client). Random if none.
+   */
   constructor (url, userId) {
     if (!url) {
       url = new URL(window.location.href)

@@ -1,3 +1,7 @@
+/** @typedef {import('uWebSockets.js').HttpResponse} HttpResponse */
+/** @typedef {import('uWebSockets.js').HttpRequest} HttpRequest */
+/** @typedef {import('uWebSockets.js').TemplatedApp} TemplatedApp */
+
 import path from 'path'
 
 import LiveDirectory from 'live-directory'
@@ -13,8 +17,8 @@ import { ASSETS_PATH, buildJsClient } from '../lib/build-client.js'
 function processClientJsRequest (assets, minify = false) {
   /**
    *
-   * @param {import('uWebSockets.js').HttpResponse} response
-   * @param {import('uWebSockets.js').HttpRequest} request
+   * @param {HttpResponse} response
+   * @param {HttpRequest} request
    */
   return async function (response, request) {
     response.writeHeader('Access-Control-Allow-Origin', '*')
@@ -39,7 +43,7 @@ function processClientJsRequest (assets, minify = false) {
 
 /**
  *
- * @param {import('uWebSockets.js').TemplatedApp} app
+ * @param {TemplatedApp} app
  */
 export async function client (app) {
   for (const format of ['esm', 'iife']) {

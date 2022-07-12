@@ -6,6 +6,16 @@ import { client } from './routes/client.js'
 export const PORT = process.env.PORT || 3000
 export const HOST = process.env.HOST || '0.0.0.0'
 
+/**
+ *
+ * Creates WebSocket & Http Server.
+ *
+ * @param {Object} opts Server options
+ * @param {number} opts.port Port to listen to
+ * @param {string} opts.host Host to listen to
+ *
+ * @returns {function} Function to gracefully stop server
+ */
 export function createServer (opts = {}) {
   const {
     port = PORT,
