@@ -25,13 +25,13 @@
     "index.js"
   ],
   "scripts": {
+    "build:client": "node ./src/lib/build-client.js",
     "lint": "standard",
-    "prepublishOnly": "npm test",
+    "prepublishOnly": "npm test && npm run build:client",
     "test": "uvu",
     "posttest": "npm run lint"
   },
   "dependencies": {
-    "@geut/socketich-client": "^0.0.1-beta.0",
     "@geut/socketich-utils": "^0.0.1-beta.0",
     "esbuild": "^0.14.44",
     "live-directory": "^2.3.2",

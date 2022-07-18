@@ -4,14 +4,14 @@ import { createRequire } from 'module'
 
 import esbuild from 'esbuild'
 
+import { ASSETS_PATH } from '../config.js'
+
 const require = createRequire(import.meta.url)
 const entryPoint = require.resolve('@geut/socketich-client')
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-export const ASSETS_PATH = join(__dirname, '..', '..', 'dist')
-
-export function buildJsClient (format, minify = false) {
+function buildJsClient (format, minify = false) {
   return esbuild.build({
     entryPoints: [entryPoint],
     outfile: join(ASSETS_PATH, format, `client${minify ? '.min' : ''}.js`),
@@ -25,4 +25,9 @@ export function buildJsClient (format, minify = false) {
     },
     sourcemap: process.env.NODE_ENV !== 'production' ? 'inline' : undefined
   })
+}
+
+for (const format of ['esm', 'iife']) {
+  await buildJsClient(format)
+  await buildJsClient(format, true)
 }

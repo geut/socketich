@@ -6,7 +6,7 @@ import path from 'path'
 
 import LiveDirectory from 'live-directory'
 
-import { ASSETS_PATH, buildJsClient } from '../lib/build-client.js'
+import { ASSETS_PATH } from '../config.js'
 
 /**
  *
@@ -46,11 +46,6 @@ function processClientJsRequest (assets, minify = false) {
  * @param {TemplatedApp} app
  */
 export async function client (app) {
-  for (const format of ['esm', 'iife']) {
-    await buildJsClient(format)
-    await buildJsClient(format, true)
-  }
-
   const assets = new LiveDirectory({
     path: ASSETS_PATH,
     keep: {
