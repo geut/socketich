@@ -2,11 +2,14 @@
 /** @typedef {import('uWebSockets.js').HttpRequest} HttpRequest */
 /** @typedef {import('uWebSockets.js').TemplatedApp} TemplatedApp */
 
-import path from 'path'
+import path from 'node:path'
+import url from 'node:url'
 
 import LiveDirectory from 'live-directory'
 
-import { ASSETS_PATH } from '../config.js'
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
+
+const ASSETS_PATH = path.join(__dirname, '..', '..', 'dist')
 
 /**
  *
