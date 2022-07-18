@@ -1,6 +1,6 @@
 {
   "name": "@geut/socketich-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Socketich Utils",
   "keywords": [],
   "homepage": "https://github.com/geut/socketich#readme",
@@ -48,5 +48,5 @@
       "browser"
     ]
   },
-  "gitHead": "4f09193cd7a54a8097ed1112dd5d35e0fd25cf35"
+  "gitHead": "3c7e985f68585f67bb7589325a39165d2b867203"
 }
