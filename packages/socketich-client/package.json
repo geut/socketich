@@ -1,6 +1,6 @@
 {
   "name": "@geut/socketich-client",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Socketich Client",
   "keywords": [],
   "homepage": "https://github.com/geut/socketich#readme",
@@ -31,7 +31,7 @@
     "posttest": "npm run lint"
   },
   "dependencies": {
-    "@geut/socketich-utils": "^0.0.3",
+    "@geut/socketich-utils": "^0.0.4",
     "msgpackr": "^1.6.1",
     "nanoassert": "^2.0.0",
     "pws": "^6.0.1",
@@ -44,11 +44,14 @@
   "engines": {
     "node": ">=14"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "adca87d31553fdd3e26f0217e30786325fa4dcbc",
   "standard": {
     "env": [
       "node",
       "browser"
     ]
-  },
-  "gitHead": "3c7e985f68585f67bb7589325a39165d2b867203"
+  }
 }
