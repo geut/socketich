@@ -16,7 +16,7 @@ export const defaultWebSocketOptions = {
 /**
  *
  * Creates a WebSocket handler for '/' in @param {app}
- * 
+ *
  * @param {TemplatedApp} app
  * @param {Object} opts
  * @param {WebSocketBehavior} opts.webSocketOptions
