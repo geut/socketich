@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import { SocketichClientProvider } from '@geut/socketich-react'
+import { SocketichProvider } from '@geut/socketich-react'
 
 import App from './App'
 
@@ -9,8 +9,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <SocketichClientProvider url='ws://0.0.0.0:3001'>
+    <SocketichProvider>
       <App />
-    </SocketichClientProvider>
+    </SocketichProvider>
   </React.StrictMode>
 )
