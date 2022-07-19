@@ -16,6 +16,8 @@
   },
   "devDependencies": {
     "@geut/chan": "^3.2.9",
+    "lerna": "^5.1.8",
+    "nx": "^14.4.3",
     "standard": "latest",
     "turbo": "latest"
   },

@@ -1,30 +1,21 @@
-import { createContext, useMemo } from 'react'
+import { useContext, createContext, useEffect } from 'react'
 
-import { SocketichClient } from '@geut/socketich-client'
-
-const clients = new Map()
-
-function createClient (url, userId) {
-  const clientKey = `${url}_${userId}`
-
-  let client
-  if (!clients.has(clientKey)) {
-    client = new SocketichClient(url, userId)
-    clients.set(clientKey, client)
-  }
-
-  return clients.get(clientKey)
-}
+import { SocketichContext } from './SocketichProvider'
 
 export const SocketichClientContext = createContext()
 
-export function SocketichClientProvider ({ url, userId, children }) {
-  const client = useMemo(() => createClient(url, userId), [url, userId])
+export function SocketichClientProvider ({ id, config, children }) {
+  const { clients, createClient } = useContext(SocketichContext)
 
-  if (!client) return null
+  useEffect(() => {
+    if (clients[id]) return
+    createClient(id, config)
+  }, [id, config])
+
+  if (!clients[id]) return null
 
   return (
-    <SocketichClientContext.Provider value={client}>
+    <SocketichClientContext.Provider value={clients[id]}>
       {children}
     </SocketichClientContext.Provider>
   )
