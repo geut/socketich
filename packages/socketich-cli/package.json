@@ -1,6 +1,6 @@
 {
   "name": "@geut/socketich-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Socketich Cli",
   "keywords": [],
   "homepage": "https://github.com/geut/socketich#readme",
@@ -31,7 +31,7 @@
     "posttest": "npm run lint"
   },
   "dependencies": {
-    "@geut/socketich": "^0.0.4",
+    "@geut/socketich": "^0.0.5",
     "boxen": "^7.0.0",
     "meow": "^10.1.3",
     "update-notifier": "^6.0.2"
