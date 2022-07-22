@@ -1,6 +1,6 @@
 {
   "name": "@geut/socketich-client",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Socketich Client",
   "keywords": [],
   "homepage": "https://github.com/geut/socketich#readme",
@@ -31,7 +31,7 @@
     "posttest": "npm run lint"
   },
   "dependencies": {
-    "@geut/socketich-utils": "^0.0.5",
+    "@geut/socketich-utils": "^0.0.6",
     "msgpackr": "^1.6.1",
     "nanoassert": "^2.0.0",
     "pws": "^6.0.1",
